@@ -1,0 +1,20 @@
+n=7 
+i=0 
+new_list=[] 
+ 
+if n%2 ==0: 
+    while n>=0: 
+        ls=list(permutations('1'*n +'2'*i)) 
+        new_list.append(set(ls)) 
+        n-=2 
+        i+=1 
+else : 
+     while n>0: 
+        ls=list(permutations('1'*n +'2'*i)) 
+        new_list.append(set(ls)) 
+        n-=2 
+        i+=1
+
+
+
+permutations -> Continue calculating the arrangements
