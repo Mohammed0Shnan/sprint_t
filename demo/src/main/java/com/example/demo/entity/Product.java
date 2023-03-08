@@ -18,7 +18,7 @@ public class Product extends BaseEntity {
 
     @Getter
     @Setter
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "address_id", nullable = false)
     private Address address ;
 

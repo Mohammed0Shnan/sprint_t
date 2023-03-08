@@ -5,9 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "address")
+@Table(name = "addresses")
 public class Address extends BaseEntity {
-
 
     @Getter
     @Setter
@@ -18,6 +17,4 @@ public class Address extends BaseEntity {
     @Setter
     @Column
     private double longitude;
-
-    
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AddressRepository extends PagingAndSortingRepository<Address, Long> {
-    Address save(Address address);
 
+    Address save(Address address);
 }

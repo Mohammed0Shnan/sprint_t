@@ -26,22 +26,32 @@ class Data{
   late int id ;
   late String name;
   late String image;
-  late int address;
+  late Address address;
  // late String 
   Data.fromJson(Map<String, dynamic> data) {
 
     this.id = data['id'];
     this.name = data['name'];
     this.image = data['imageUrl'] == null?'': data['imageUrl']  ;
-    this.address =  data['address_id'] == null ?0:data['address_id'] ;
+    this.address =  Address.fromJson(data['address']) ;
   //  this.createdAt=DateTime.parse( data['createdAt'].toString() ) ;
 
   }
 }
 
+class Address{
+  late int id ;
+  late double longitude;
+  late double latitude;
+  
+  Address.fromJson(Map<String, dynamic> data) {
 
+    this.id = data['id'];
+    this.longitude = data['longitude'];
+    this.latitude = data['latitude'];
 
-
+  }
+}
 
 
 

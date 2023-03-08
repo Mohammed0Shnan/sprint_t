@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.request.CreateProductRequest;
-import com.example.demo.dto.response.CreateProductResponse;
 import com.example.demo.dto.response.ProductResponse;
 import com.example.demo.service.ProductService;
 import org.modelmapper.ModelMapper;
@@ -31,8 +30,8 @@ public class ProductController {
         }.getType());
     }
     @PostMapping("/")
-    public CreateProductResponse createProduct(@Valid @RequestBody CreateProductRequest request) {
+    public ProductResponse createProduct(@Valid @RequestBody CreateProductRequest request) {
         var product = productService.create(request);
-        return modelMapper.map(product, CreateProductResponse.class);
+        return modelMapper.map(product, ProductResponse.class);
     }
 }

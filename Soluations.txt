@@ -1,0 +1,58 @@
+
+- Solve the first question
+Required has been implemented in the demo file
+
+-------------------------------------------------------- 
+
+- Solve the second question (solution algorithm)
+
+n=7 
+i=0 
+new_list=[] 
+st=[] 
+
+if n%2 ==0: 
+    while n>=0: 
+        ls=list(permutations('1'*n +'2'*i)) 
+        new_list.append(set(ls)) 
+        n-=2 
+        i+=1 
+else : 
+     while n>0: 
+        ls=list(permutations('1'*n +'2'*i)) 
+        new_list.append(set(ls)) 
+        n-=2 
+        i+=1
+
+
+
+permutations -> Continue calculating the arrangements
+
+Note: For the arrangements, I used set for the unique key,
+for example 11 and 11 are two different strings.
+
+-------------------------------------------------------- 
+
+
+- Solve the third question 
+The algorithm is in the demo file at com.example.demo.algorethims;
+
+----------------------------------------------------------------------
+
+- Solve the fourth question
+The soluation is in the demo file at com.example.demo.security;
+
+----------------------------------------------------------------------
+- Solve the five question
+	The method used is increase the number of threads in order to serve more users (Thrid Pool).
+        (The settings are in the resources application.properties  )
+        Settings will be explained at the interview
+	This is one of the expansion methods, or we can create a duplicate of the data base
+
+----------------------------------------------------------------------
+- Solve the Sixth question
+
+The mechanism for receiving data from the client side has been clarified and
+ the architecture and transfer between layers has been clarified
+ (get all product end point has been applied)
+ and the process of fetching data is done by scrolling the screen down
